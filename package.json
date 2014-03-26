@@ -1,0 +1,15 @@
+{
+  "name": "webdriver-bugs",
+  "description": "To share webdriver bugs.",
+  "homepage": "https://github.com/juliemr/webdriver-bugs",
+  "author": "Julie Ralph <ju.ralph@gmail.com>",
+  "dependencies": {
+    "selenium-webdriver": "2.40.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/juliemr/webdriver-bugs.git"
+  },
+  "license": "MIT",
+  "version": "0.1.0"
+}
