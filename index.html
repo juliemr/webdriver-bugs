@@ -6,24 +6,26 @@
       document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + '<br/>' + message;
     };
 
-    var textinput = document.getElementById('textinput');
-    var numberinput = document.getElementById('numberinput');
-    var theselect = document.getElementById('theselect');
-    textinput.addEventListener('input', function() {
-      addmessage('textinput input');
-    });
-    numberinput.addEventListener('input', function() {
-      addmessage('numberinput input');
-    });
-    textinput.addEventListener('keydown', function() {
-      addmessage('textinput keydown');
-    });
-    numberinput.addEventListener('keydown', function() {
-      addmessage('numberinput keydown');
-    });
+    var init = function() {
+      var textinput = document.getElementById('textinput');
+      var numberinput = document.getElementById('numberinput');
+      var theselect = document.getElementById('theselect');
+      textinput.addEventListener('input', function() {
+        addmessage('textinput input');
+      });
+      numberinput.addEventListener('input', function() {
+        addmessage('numberinput input');
+      });
+      textinput.addEventListener('keydown', function() {
+        addmessage('textinput keydown');
+      });
+      numberinput.addEventListener('keydown', function() {
+        addmessage('numberinput keydown');
+      });
+    };
   </script>
 </head>
-<body>
+<body onload="init()">
   <input type="text" id="textinput" onchange="addmessage('text input change')"></input>
   <input type="number" id="numberinput" onchange="addmessage('number input change')"></input>
   <select id="theselect" onchange="addmessage('select change')">
