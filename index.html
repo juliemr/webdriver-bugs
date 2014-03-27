@@ -1,13 +1,19 @@
 <html>
 <head>
   <title>Simple example app</title>
+  <script>
+    var addmessage = function(message) {
+      document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + message;
+    }
+  </script>
 </head>
 <body>
-  <input type="text" id="textinput"></input>
-  <input type="number" id="numberinput"></input>
-  <select id="theselect">
+  <input type="text" id="textinput" onchange="addmessage('text input change')"></input>
+  <input type="number" id="numberinput" onchange="addmessage('number input change')"></input>
+  <select id="theselect" onchange="addmessage('select change')">
     <option value="a">A</option>
     <option value="b">B</option>
   </select>
+  <div id="messages"></div>
 </body>
 </html>
