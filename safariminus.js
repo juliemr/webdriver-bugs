@@ -19,6 +19,8 @@ driver.sleep(5000);
 
 driver.findElement(webdriver.By.id('numberinput')).getAttribute('value').
     then(function(value) {
+      // Expected output: --.6
+      // Actual output: 6
       console.log('value: ' + value);
     });
 
