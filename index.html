@@ -4,7 +4,23 @@
   <script>
     var addmessage = function(message) {
       document.getElementById('messages').innerHTML = document.getElementById('messages').innerHTML + '<br/>' + message;
-    }
+    };
+
+    var textinput = document.getElementById('textinput');
+    var numberinput = document.getElementById('numberinput');
+    var theselect = document.getElementById('theselect');
+    textinput.addEventListener('input', function() {
+      addmessage('textinput input');
+    });
+    numberinput.addEventListener('input', function() {
+      addmessage('numberinput input');
+    });
+    textinput.addEventListener('keydown', function() {
+      addmessage('textinput keydown');
+    });
+    numberinput.addEventListener('keydown', function() {
+      addmessage('numberinput keydown');
+    });
   </script>
 </head>
 <body>
