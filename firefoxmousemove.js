@@ -2,9 +2,8 @@ var util = require('util'),
     webdriver = require('selenium-webdriver');
 
 
-// Note that this behaves differently depending on the browser - safari
-// never shows the select as open, firefox never fires the 'change' event,
-// and chrome never closes the select.
+// Note that this behaves differently depending on the browser - firefox fails,
+// chrome works fine.
 var driver = new webdriver.Builder().
     usingServer('http://localhost:4444/wd/hub').
     withCapabilities({'browserName': 'firefox'}).
