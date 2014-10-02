@@ -29,6 +29,8 @@
 <body onload="init()">
   <input type="text" id="textinput" onchange="addmessage('text input change')" ng-model="text"></input>
   <input type="number" id="numberinput" onchange="addmessage('number input change')" ng-model="number"></input>
+  <input type="text" id="onfocusinput" ng-focus="count = count + 1"/>
+
   <select id="theselect" onchange="addmessage('select change')" ng-model="select">
     <option value="a">A</option>
     <option value="b">B</option>
@@ -36,6 +38,7 @@
   <div>
     <label>Text:</label><span>{{text}}</span>
     <label>Number:</label><span>{{number}}</span>
+    <label>Focus Count:</label><span>{{count}}</span>
     <label>Select:</label><span>{{select}}</span>
   </div>
   <div id="messages"></div>
