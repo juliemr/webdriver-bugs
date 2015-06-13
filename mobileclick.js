@@ -26,8 +26,8 @@ var CHROME_MOBILE_EMULATION = {
 var ChromeDesktop = {
   browserName: 'chrome',
   chromeOptions: mergeInto(CHROME_OPTIONS, {
-    // This only fails on Chrome 44.0 beta.
-    'binary': '/Applications/Google Chrome Beta.app/Contents/MacOS/Google Chrome',
+    // This only fails on Chrome 45.0 canary.
+    'binary': '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
     'mobileEmulation': CHROME_MOBILE_EMULATION
   }),
   loggingPrefs: {
