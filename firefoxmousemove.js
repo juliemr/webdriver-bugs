@@ -11,10 +11,14 @@ var driver = new webdriver.Builder().
 
 driver.get('http://juliemr.github.io/webdriver-bugs/');
 
-driver.actions().mouseMove({ x : 0, y : 0}).perform();
+driver.actions().mouseMove(driver.findElement(webdriver.By.id('textinput'))).doubleClick().perform();
+
+driver.sleep(5000);
 
 driver.get('http://juliemr.github.io/webdriver-bugs/');
 
-driver.actions().mouseMove({ x : 0, y : 0}).perform();
+driver.actions().mouseMove(driver.findElement(webdriver.By.id('theselect'))).doubleClick().perform();
+
+driver.sleep(5000);
 
 driver.quit();
