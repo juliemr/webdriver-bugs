@@ -1,0 +1,14 @@
+<html>
+<head>
+  <title>Simple example app</title>
+  <script>
+    handleKeyDown = function(event) {
+      document.getElementById('output').innerHTML = 'Key: ' + event.key + ' KeyCode: ' + event.keyCode;
+    }
+  </script>
+</head>
+<body>
+  <button onkeydown="handleKeyDown(event)">Click Me</button>
+  <span id="output"></span>
+</body>
+</html>
