@@ -6,8 +6,8 @@ var driver = new webdriver.Builder().
     withCapabilities({'browserName': 'chrome'}).
     build();
 
-// driver.get('http://juliemr.github.io/webdriver-bugs/');
-driver.get('http://localhost:8111/button.html');
+driver.get('http://juliemr.github.io/webdriver-bugs/button.html');
+// driver.get('http://localhost:8111/button.html');
 
 driver.findElement(webdriver.By.css('button')).click();
 
